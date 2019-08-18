@@ -1,3 +1,4 @@
+
 ## Designing a URL Shortening service like TinyURL
 
 Let’s design a URL shortening service like TinyURL. This service will provide short aliases redirecting to long URLs. Similar services: bit.ly, goo.gl,  [qlink.me  7](http://qlink.me/), etc. Difficulty Level: Easy
@@ -84,29 +85,17 @@ To cache 20% of these requests, we will need 170GB of memory.
 
 **High level estimates:**  Assuming 500 million new URLs per month and 100:1 read:write ratio, following is the summary of the high level estimates for our service:
 
-New URLs
+	New URLs200/s
 
-200/s
+	URL redirections 19K/s
 
-URL redirections
+	Incoming data 100KB/s
 
-19K/s
+	Outgoing data 9MB/s
 
-Incoming data
+	Storage for 5 years 15TB
 
-100KB/s
-
-Outgoing data
-
-9MB/s
-
-Storage for 5 years
-
-15TB
-
-Memory for cache
-
-170GB
+	Memory for cache 170GB
 
 4.  System APIs
 
